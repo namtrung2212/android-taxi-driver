@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "891445113780",
+    "firebase_url": "https://sconnecting-a2a1c.firebaseio.com",
+    "project_id": "sconnecting-a2a1c",
+    "storage_bucket": "sconnecting-a2a1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891445113780:android:bde9aba9b32d6fb8",
+        "android_client_info": {
+          "package_name": "com.sconnecting.driverapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "891445113780-nlm8vr0pfq14hf2teinqa5ikb3t6klnv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sconnecting.driverapp",
+            "certificate_hash": "7EB7FD78FDA496926F1BBB03B92F79F276660518"
+          }
+        },
+        {
+          "client_id": "891445113780-m96lokhhvj77j93dscnk6nt0l1hs7ejm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAf1XFOJhJzt9-PLR6oLe0VsKJ82EmzH-8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "891445113780-m96lokhhvj77j93dscnk6nt0l1hs7ejm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

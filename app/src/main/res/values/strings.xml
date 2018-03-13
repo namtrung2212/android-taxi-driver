@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SCDriver</string>
+    <string name="action_settings">Settings</string>
+    <string name="rootScreenTitle">RootScreen</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="mapScreenTitle">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_app_root">SCDriver</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

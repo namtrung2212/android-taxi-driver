@@ -1,0 +1,253 @@
+
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:id="@+id/pnlProfileArea"
+    android:animateLayoutChanges="true"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    tools:context="com.sconnecting.driverapp.ui.taxi.order.monitoring.UserProfileView">
+
+
+
+    <ImageView
+        app:srcCompat="@drawable/panel_gray"
+        android:id="@+id/imgPanelProfile"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        android:padding="0dp"/>
+
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        app:civ_border_color="#737373"
+        app:civ_border_width="0.5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/redcircle"
+        android:id="@+id/redCircle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="40dp"
+        android:contentDescription=""/>
+
+    <TextView
+        android:id="@+id/lblMessageNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment= "center"
+        android:layout_centerVertical="true"
+        android:maxLines="1"
+        android:text="10"
+        android:textColor="#ffffff"
+        android:textSize="12dp"
+        android:textStyle="normal"
+        app:layout_constraintCenterX_toCenterX="@+id/redCircle"
+        app:layout_constraintCenterY_toCenterY="@+id/redCircle"
+        tools:layout_editor_absoluteY="9dp"
+        tools:layout_editor_absoluteX="43dp" />
+
+    <TextView
+        android:id="@+id/lblUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment= "textStart"
+        android:layout_centerVertical="true"
+        android:maxLines="1"
+        android:text="NGUYỄN VĂN A2"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:textStyle="normal|bold"
+        app:layout_constraintLeft_toRightOf="@+id/imgAvatar"
+        app:layout_constraintTop_toTopOf="@+id/imgAvatar"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="3dp" />
+
+
+
+    <ImageButton
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:srcCompat="@drawable/call"
+        android:id="@+id/btnCall"
+        android:background= "@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginEnd="13dp" />
+
+
+    <TextView
+        android:id="@+id/lblLastMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="#787878"
+        android:textSize="12dp"
+        android:textStyle="normal|italic"
+        android:textAlignment="viewStart"
+        app:layout_constraintLeft_toLeftOf="@+id/lblUserName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblUserName"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="15dp" />
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_height="300dp"
+        android:layout_width="0dp"
+        android:id="@+id/chattingView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgAvatar"
+        android:padding="2dp"
+        android:clickable="true"
+        android:visibility="gone">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="Gửi"
+            android:background="@drawable/button_style1_blue"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:imeOptions="actionSend"
+            android:textAlignment="center"
+            android:id="@+id/btnSend"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="visible"/>
+
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:text=""
+            android:id="@+id/txtMessage"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btnSend"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="12sp"
+            android:textAlignment="viewStart"
+            android:foregroundTint="#565D5C"
+            android:background="@drawable/panel_gray"
+            android:paddingLeft="10dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:visibility="visible"
+            />
+
+        <FrameLayout
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/txtMessage"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="0dp"
+            android:clickable="true"
+            android:visibility="visible">
+
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/refreshControl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EAEAEA">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/chattingTable"
+                    android:background="#EAEAEA"/>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/emptyRefreshControl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="#EAEAEA">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    android:background="#EAEAEA">
+
+                </ScrollView>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </FrameLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+    <com.joanzapata.iconify.widget.IconTextView
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:text="{fa-angle-down}"
+        android:id="@+id/btnCollapse"
+        android:textSize="17sp"
+        android:textColor="@color/dark_gray"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:gravity="bottom"
+        app:layout_constraintCenterX_toCenterX="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingBottom="0dp"
+        android:layout_marginBottom="7dp" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>
+

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_gray">
+
+
+
+    <ImageView
+        app:srcCompat="@drawable/centerlogo"
+        android:id="@+id/imgLogo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentLeft="true"
+        android:padding="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"/>
+
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imgLogo"
+        android:text="KHÁCH ĐỀ NGHỊ ĐÓN"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_gray"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="0dp"
+        android:paddingLeft="0dp"
+        style="Custom Notification Text" />
+
+
+    <TextView
+        android:id="@+id/txtSentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitle"
+        android:layout_alignParentRight="true"
+        android:layout_alignBaseline="@id/txtTitle"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_gray"
+        android:text="04:02 PM"
+        android:layout_marginRight="5dp"
+        style="Custom Notification Text" />
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/line"
+        android:id="@+id/line1"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="2dp"
+        android:background="#BFBFBF"
+        android:textColor="@color/dark_gray"
+        android:layout_below="@id/txtTitle"
+        android:layout_alignLeft="@id/txtTitle"/>
+
+    <TextView
+        android:id="@+id/txtDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTitle"
+        android:layout_toRightOf="@+id/imgLogo"
+        android:textSize="12sp"
+        android:textColor="@color/dark_gray"
+        android:text="125 Phan Văn Trị, Phường 1, Tân Bình, Tp Hồ Chí Minh"
+        android:layout_marginTop="7dp"
+        style="Custom Notification Text" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/line"
+        android:id="@+id/line2"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="10dp"
+        android:background="#BFBFBF"
+        android:textColor="@color/dark_gray"
+        android:layout_below="@id/txtDesc"
+        android:layout_alignLeft="@id/txtDesc"/>
+
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line2"
+        android:layout_alignRight="@+id/txtSentTime"
+        android:textSize="16sp"
+        android:textColor="@color/dark_gray"
+        android:text="150.000 đ"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        style="Custom Notification Text" />
+
+
+    <TextView
+        android:id="@+id/txtBelowDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtPrice"
+        android:layout_alignLeft="@+id/txtDesc"
+        android:textSize="11sp"
+        android:textColor="@color/dark_gray"
+        android:text="ẤN VÀO ĐỂ XEM "
+        style="Custom Notification Text" />
+
+
+    <ImageView
+        android:id="@+id/imagenotiright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="10dp" />
+
+</RelativeLayout>

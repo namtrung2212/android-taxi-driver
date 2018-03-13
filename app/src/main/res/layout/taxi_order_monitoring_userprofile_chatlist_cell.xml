@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    cardview:cardElevation="0dp"
+    cardview:contentPadding="3dp"
+    android:layout_margin="1dp"
+    android:background="#EAEAEA"
+    app:cardBackgroundColor="#EAEAEA">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EAEAEA">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layoutDirection="rtl"
+            android:padding="0dp"
+            android:layout_margin="0dp"
+            android:id="@+id/linearlayout"
+            android:background="#EAEAEA">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/imgAvatar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:civ_border_color="#737373"
+                    app:civ_border_width="0.5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginLeft="0dp"/>
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/backgroundPanel"
+                    android:layout_marginStart="5dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:background="@drawable/blueroundpanel">
+
+
+                    <TextView android:id="@+id/lblContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="20"
+                        android:ellipsize="middle"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:layout_weight="1"
+                        android:text=""/>
+
+
+
+                </FrameLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+

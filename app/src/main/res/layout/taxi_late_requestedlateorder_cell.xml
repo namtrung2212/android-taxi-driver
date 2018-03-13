@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="295dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="5dp"
+
+    android:layout_centerHorizontal="true"
+    android:background="#ffffff"
+    cardview:cardElevation="5dp"
+    cardview:cardCornerRadius="0dp"
+    cardview:contentPadding="10dp"
+    cardview:cardBackgroundColor="#ffffff"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/constraintLayout">
+
+
+
+            <com.google.android.gms.maps.MapView
+                xmlns:map="http://schemas.android.com/tools"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+                app:layout_constraintRight_toRightOf="@+id/constraintLayout"
+                app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginBottom="80dp"
+                android:id="@+id/googlemap"
+                map:mapType="normal"
+                map:liteMode="true"
+                map:focusable="false"
+                map:clickable="false"
+                map:focusableInTouchMode="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                cardview:srcCompat="@drawable/line"
+                android:id="@+id/line"
+                cardview:layout_constraintTop_toBottomOf="@+id/googlemap"
+                cardview:layout_constraintLeft_toLeftOf="@+id/googlemap"
+                cardview:layout_constraintRight_toRightOf="@+id/googlemap"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginTop="10dp"
+                android:background="#BFBFBF"/>
+
+
+            <TextView
+                android:text="lblPickupLocation"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/lblPickupLocation"
+                android:textSize="11sp"
+                android:inputType="textNoSuggestions"
+                app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+                app:layout_constraintTop_toBottomOf="@+id/line"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:textColor="@color/dark_gray"/>
+
+
+            <TextView
+                android:text="lblDropLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblDropLocation"
+                android:textSize="11sp"
+                android:inputType="textNoSuggestions"
+                app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+                app:layout_constraintTop_toBottomOf="@+id/lblPickupLocation"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/dark_gray"/>
+
+
+            <ImageButton
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                app:srcCompat="@drawable/pickupicon"
+                android:id="@+id/btnPickupIcon"
+                android:background= "@null"
+                app:layout_constraintRight_toLeftOf="@+id/lblPickupLocation"
+                app:layout_constraintCenterY_toCenterY="@+id/lblPickupLocation"
+                android:layout_marginEnd="10dp"
+                android:scaleType="fitCenter"/>
+
+
+            <ImageButton
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                app:srcCompat="@drawable/dropicon"
+                android:id="@+id/btnDropIcon"
+                android:background= "@null"
+                app:layout_constraintRight_toLeftOf="@+id/lblDropLocation"
+                app:layout_constraintCenterY_toCenterY="@+id/lblDropLocation"
+                android:layout_marginEnd="10dp"
+                android:scaleType="fitCenter"/>
+
+
+
+            <TextView
+                android:text="lblDateTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblDateTime"
+                android:textSize="11sp"
+                android:inputType="textNoSuggestions"
+                app:layout_constraintCenterY_toCenterY="@+id/lblStatus"
+                app:layout_constraintTop_toBottomOf="@+id/lblDropLocation"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/dark_gray"/>
+
+
+            <TextView
+                android:text="0 KM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblStatus"
+                android:textSize="12sp"
+                android:inputType="textNoSuggestions"
+                app:layout_constraintCenterX_toCenterX = "@+id/constraintLayout"
+                app:layout_constraintTop_toBottomOf="@+id/lblDropLocation"
+                android:layout_marginTop="8dp"
+                android:textColor="#5592CA"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                />
+
+
+
+            <TextView
+                android:text="3000 d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblCurrentPrice"
+                android:textSize="16sp"
+                android:inputType="textNoSuggestions"
+                app:layout_constraintCenterY_toCenterY= "@+id/lblStatus"
+                app:layout_constraintRight_toRightOf="@+id/constraintLayout"
+                android:layout_marginEnd="5dp"
+                android:textColor="#555555"
+                android:textStyle="bold"
+                android:textAlignment="textEnd"
+                />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    android:layout_centerHorizontal="true"
+    android:background="#ECECEC"
+    cardview:cardElevation="0dp">
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="#ECECEC"
+        android:id="@+id/constraintLayout">
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/line"
+            android:id="@+id/line1"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+            app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+            app:layout_constraintRight_toRightOf="@+id/constraintLayout"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="#BFBFBF" />
+
+        <TextView
+            android:id="@+id/lblTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:maxLines="1"
+            android:text="NGUYỄN VĂN A2"
+            android:textColor="#555555"
+            android:textSize="14dp"
+            app:layout_constraintCenterY_toCenterY="@+id/constraintLayout"
+            app:layout_constraintCenterX_toCenterX="@+id/constraintLayout"
+            android:textStyle="normal|bold" />
+
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/leftIcon"
+            android:text="{fa-plus-circle}"
+            android:textSize="18sp"
+            android:textColor="#498BC7"
+            app:layout_constraintCenterY_toCenterY="@+id/constraintLayout"
+            app:layout_constraintRight_toLeftOf="@+id/lblTitle"
+            android:layout_marginEnd="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/line"
+            android:id="@+id/line2"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintLeft_toLeftOf="@+id/constraintLayout"
+            app:layout_constraintRight_toRightOf="@+id/constraintLayout"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="#BFBFBF" />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
